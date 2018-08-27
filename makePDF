@@ -1,0 +1,5 @@
+#!/bin/bash
+set -eu
+pdflatex ai-intro-article.tex
+bibtex ai-intro-article
+pdflatex ai-intro-article.tex
