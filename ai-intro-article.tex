@@ -1,5 +1,13 @@
 \documentclass[jou,apacite]{apa6}
 
+\usepackage[utf8]{inputenc}
+\usepackage{glossaries}
+\usepackage{makeidx}
+
+\makeglossaries
+\loadglsentries{glossary}
+\makeindex
+
 \title{A short introduction to artificial intelligence}
 \shorttitle{AI intro}
 
@@ -12,21 +20,46 @@
 \maketitle    
                         
 \section{Motivation}
-There are a lot of definitions for artificial intelligence (AI). Most of them are based on a definition of intelligence which in itself is already difficult to define. A simple approach would be to say that humans solving complex problems (with thoughts) is considered intelligent. So making programs or machines pursue the way humans might solve problems can be considered as artificial intelligence.
+There are a lot of definitions for \gls{ai}. Most of them are based on a definition of intelligence which in itself is already difficult to define. A simple approach would be to say that humans solving complex problems (with thoughts) is considered intelligent. So making programs or machines pursue the way humans might solve problems can be considered as \gls{ai}.
 
-Another aspect of AI is often that programs associated with it are considered intelligent in itself because it is hard to understand how they work. This is mainly due to the fact that they work in ways that do not come to you straight away. That is often also considered as intelligent.
-But in programming it and actually coming up with the idea of a program that is considered to be an AI, the myth of this intelligence is already debunked and does not pose any intelligence anymore. This illustrates the possible paradoxon in AI.
+Another aspect of \gls{ai} is often that programs associated with it are considered intelligent in itself because it is hard to understand how they work. This is mainly due to the fact that they work in ways that do not come to you straight away. That is often also considered as intelligent.
+But in programming it and actually coming up with the idea of a program that is considered to be an \gls{ai}, the myth of this intelligence is already debunked and does not pose any intelligence anymore. This illustrates the possible paradoxon in \gls{ai}.
 
-AI can be used for image recognition, for controllig machines, to play games or to detect fraud. It can be used in nearly any domain and has already found great usage in medicine or commercial scenarios. Using AI can give a company a major advantage against competitors. Companies like Netflix have embraced AI \cite{Gomez-Uribe2015} and have established a market leading position also backed by AI.
+\gls{ai} can be used for image recognition, for controllig machines, to play games or to detect fraud. It can be used in nearly any domain and has already found great usage in medicine or commercial scenarios. Using \gls{ai} can give a company a major advantage against competitors. Companies like Netflix have embraced \gls{ai} \cite{Gomez-Uribe2015} and have established a market leading position also backed by \gls{ai}.
 
-\section{Types of artificial intelligence}
- - symbolic
+\section{Types of \gls{ai}}
+Approaches to implement \gls{ai} have resulted into two major paradigms: symbolic and sub-symbolic. Symbolic approaches model a problem space with tokens or symbols that are humanly readable. This problem space is then processed by the \gls{ai} programs. The symbols themselves are therefore manipulated and processed. Because of the symbolic nature the \gls{ai} programs can be completely understood by humans. These programs are often called expert systems, rules engines, knowledge based \gls{ai} or knowledge graphs. They were the first paradigms that found usage in the past and are therefore also called \gls{gofai}. In theory they try to solve modeled problems in the same abstract way humans think and would solve problems.
+
+The sub-symbolic paradigm also consists of symbols but they are not really human interpretable. The whole idea about this paradigm is to build the parts that make human thoughts possible on a more low level abstraction. It is highly inspired by neurobiology and tries to solve problems by using that abstraction to somewhat model cognitive functions. This paradigm has found a lot of usage and popularity in the recent years.
+
+\subsection{Symbolic AI}
+Introspection more useful
+for coding
+Easier to debug
+Easier to explain
+Easier to control
+Not so Big Data
+More useful for explaining
+people’s thought
+Better for abstract
+problems
+
   - rule based
   - logics
   - SHRDLU
   - search algorithms, constraints
-  - expert systems
- - sub symbolic
+
+\subsection{Sub-symbolic AI}
+More robust against noise
+Better performance
+Less knowledge upfront
+Easier to scale up
+Big Data
+More useful for connecting to
+neuroscience
+Better for perceptual
+problems
+
   - supervised
   - unsupervised
   - semi supervised
@@ -42,6 +75,8 @@ AI can be used for image recognition, for controllig machines, to play games or 
 deeplearning book
 further readings
 
+\printglossaries
+\printindex
 \bibliography{ai-intro-article}
 
 \end{document}
