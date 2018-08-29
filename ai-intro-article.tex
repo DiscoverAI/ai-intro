@@ -1,7 +1,7 @@
 \documentclass[jou,apacite]{apa6}
 
 \usepackage[utf8]{inputenc}
-\usepackage{glossaries}
+\usepackage[nonumberlist]{glossaries}
 \usepackage{makeidx}
 
 \makeglossaries
@@ -28,26 +28,23 @@ But in programming it and actually coming up with the idea of a program that is 
 \gls{ai} can be used for image recognition, for controllig machines, to play games or to detect fraud. It can be used in nearly any domain and has already found great usage in medicine or commercial scenarios. Using \gls{ai} can give a company a major advantage against competitors. Companies like Netflix have embraced \gls{ai} \cite{Gomez-Uribe2015} and have established a market leading position also backed by \gls{ai}.
 
 \section{Types of \gls{ai}}
-Approaches to implement \gls{ai} have resulted into two major paradigms: symbolic and sub-symbolic. Symbolic approaches model a problem space with tokens or symbols that are humanly readable. This problem space is then processed by the \gls{ai} programs. The symbols themselves are therefore manipulated and processed. Because of the symbolic nature the \gls{ai} programs can be completely understood by humans. These programs are often called expert systems, rules engines, knowledge based \gls{ai} or knowledge graphs. They were the first paradigms that found usage in the past and are therefore also called \gls{gofai}. In theory they try to solve modeled problems in the same abstract way humans think and would solve problems.
+Approaches to implement \gls{ai} have resulted into two major paradigms: symbolic and sub-symbolic. Symbolic approaches model a problem space with tokens or symbols that are humanly readable. This problem space is then processed by the \gls{ai} programs. The symbols themselves are therefore manipulated and processed. Because of the symbolic nature the \gls{ai} programs can be completely understood by humans. These programs are often called \gls{expert-system}, \gls{rules-engine}, \gls{knowledge-based-ai} or \gls{knowledge-graph}. They were the first paradigms that found usage in the past and are therefore also called \gls{gofai}. In theory they try to solve modeled problems in the same abstract way humans think and would solve problems. So they answer the question 'How do humans think?'.
 
-The sub-symbolic paradigm also consists of symbols but they are not really human interpretable. The whole idea about this paradigm is to build the parts that make human thoughts possible on a more low level abstraction. It is highly inspired by neurobiology and tries to solve problems by using that abstraction to somewhat model cognitive functions. This paradigm has found a lot of usage and popularity in the recent years.
+The sub-symbolic paradigm also consists of symbols but they are not really human interpretable. The whole idea about this paradigm is to build the parts that make human thoughts possible on a more low level abstraction. It is highly inspired by neurobiology and tries to solve problems by using that abstraction to somewhat model cognitive functions. This paradigm has found a lot of usage and popularity in the recent years. This paradigms answers the question 'What do humans use to think?'.
 
-\subsection{Symbolic AI}
-Introspection more useful
-for coding
-Easier to debug
-Easier to explain
-Easier to control
-Not so Big Data
-More useful for explaining
-people’s thought
-Better for abstract
-problems
+\subsection{\gls{symbolic-ai}}
+As stated before symbolic AI solves complex problems by using strategies researchers thought humans would also use. This is done by transforming a problem space into symbols and then applying functions on these symbols. The key here is coming up with an abstract model of the problem space and transforming it into symbols. Because of the nature of this paradigms, expert systems are easier to debug and understand and to control. A big disadvantage is that you need expert domain knowledge in order to solve the problem the way humans would do. Another advantage is though that big data is not needed.
 
-  - rule based
-  - logics
-  - SHRDLU
-  - search algorithms, constraints
+Due to the symbolic nature logic can be used to solve complex problems. Logic consists of semantic and syntax. Syntax defines the representation of logics (symbols). It consists of an alphabet which forms words which in turn form language (formulas). This syntax is then interpreted by semantics. Semantics give meaning and interpretation to syntax and can be used to derive new formulas (calculus). This kind of system is called \textbf{formal system}. For more information about logics and formal systems see \cite{Richardson2006}. 
+
+Formal systems have rules. These rules can be used to inference new rules or answer questions. This is often done by calculus (e.g. resolution calculus). Such a system of \gls{ai} can be built with \gls{prolog}.
+
+Another important aspect of symbolic AI are searches. Often you have modeled a problem and try to find an answer in this problem space. This could be for example trying to find the perfect schedule for people with limited amount of time. Searches can be simple algorithms (breadth-first, depth-first) or informed algorithms ($A^*$). Informed algorithms use heuristics that try to estimate the best possible path inside a graph. This should lead to a faster search because some paths can be pruned. The intelligent part here lies in defining the heuristic.
+
+Another aspect in searches is the \gls{csp}. In a \gls{csp} are variables which have value spaces (domains). Each variable is attached to constraints. These constrains can have multiple arity and define limitations for the domains. 
+This way a net of variables and constraints is formed. The problem of solving the net and narrowing down the domains to a solution is the actual \gls{csp}. To solve these problems there are multiple algorithms (e.g. AC-3). \gls{csp} can be used to solve riddles or puzzles like Sudoku.
+
+Searches can also be used to find paths from a start to a goal. This is called planning. In planning you have a state which describes a current situation. For the state there are possible moves that can be taken. Each move has a condition, delete and add list. Those lists can be used to test and execute the moves to change the state in order to pass the start state into the goal state. This kind of procedure can be used to control for example robotic arms. For more information see \cite{Nilsson1982}.
 
 \subsection{Sub-symbolic AI}
 More robust against noise
