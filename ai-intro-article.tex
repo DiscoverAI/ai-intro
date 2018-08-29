@@ -44,7 +44,7 @@ Another important aspect of symbolic AI are searches. Often you have modeled a p
 Another aspect in searches is the \gls{csp}. In a \gls{csp} are variables which have value spaces (domains). Each variable is attached to constraints. These constrains can have multiple arity and define limitations for the domains. 
 This way a net of variables and constraints is formed. The problem of solving the net and narrowing down the domains to a solution is the actual \gls{csp}. To solve these problems there are multiple algorithms (e.g. AC-3). \gls{csp} can be used to solve riddles or puzzles like Sudoku.
 
-Searches can also be used to find paths from a start to a goal. This is called planning. In planning you have a state which describes a current situation. For the state there are possible moves that can be taken. Each move has a condition, delete and add list. Those lists can be used to test and execute the moves to change the state in order to pass the start state into the goal state. This kind of procedure can be used to control for example robotic arms. For more information see \cite{Nilsson1982}.
+Searches can also be used to find paths from a start to a goal. This is called planning. In planning you have a state which describes a current situation. For the state there are possible moves that can be taken. Each move has a condition, delete and add list. Those lists can be used to test and execute the moves to change the state in order to pass the start state into the goal state. This kind of procedure can be used to control for example robotic arms. For more information see \gls{strips} and \cite{Nilsson1982}.
 
 \subsection{Sub-symbolic AI}
 More robust against noise
