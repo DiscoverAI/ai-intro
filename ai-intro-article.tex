@@ -20,7 +20,7 @@
 \maketitle    
                         
 \section{Motivation}
-There are a lot of definitions for \gls{ai}. Most of them are based on a definition of intelligence which in itself is already difficult to define. A simple approach would be to say that humans solving complex problems (with thoughts) is considered intelligent. So making programs or machines pursue the way humans might solve problems can be considered as \gls{ai}.
+There are a lot of definitions for \gls{ai}. Most of them are based on a definition of intelligence which in itself is already difficult to define. A simple approach would be to say that humans cognitive functions (e.g. solving complex problems or learning) is considered intelligent. So making programs or machines pursue the way humans might solve problems or learn can be considered as \gls{ai}. These complex problems can be natural language processing, visual perception, motor control, planning or game theory.
 
 Another aspect of \gls{ai} is often that programs associated with it are considered intelligent in itself because it is hard to understand how they work. This is mainly due to the fact that they work in ways that do not come to you straight away. That is often also considered as intelligent.
 But in programming it and actually coming up with the idea of a program that is considered to be an \gls{ai}, the myth of this intelligence is already debunked and does not pose any intelligence anymore. This illustrates the possible paradoxon in \gls{ai}.
@@ -28,9 +28,9 @@ But in programming it and actually coming up with the idea of a program that is 
 \gls{ai} can be used for image recognition, for controllig machines, to play games or to detect fraud. It can be used in nearly any domain and has already found great usage in medicine or commercial scenarios. Using \gls{ai} can give a company a major advantage against competitors. Companies like Netflix have embraced \gls{ai} \cite{Gomez-Uribe2015} and have established a market leading position also backed by \gls{ai}.
 
 \section{Types of \gls{ai}}
-Approaches to implement \gls{ai} have resulted into two major paradigms: \textbf{symbolic} and \textbf{sub-symbolic}. Symbolic approaches model a problem space with tokens or symbols that are humanly readable. This problem space is then processed by the \gls{ai} programs. The symbols themselves are therefore manipulated and processed. Because of the symbolic nature the \gls{ai} programs can be completely understood by humans. These programs are often called \gls{expert-system}, \gls{rules-engine}, \gls{knowledge-based-ai} or \gls{knowledge-graph}. They were the first paradigms that found usage in the past and are therefore also called \gls{gofai}. In theory they try to solve modeled problems in the same abstract way humans think and would solve problems. So they answer the question \textit{'How do humans think?'}.
+Approaches to implement \gls{ai} have resulted into two major paradigms: \textbf{symbolic} and \textbf{sub-symbolic}. Symbolic approaches model a problem space with tokens or symbols that are humanly readable. This problem space is then processed by the \gls{ai} programs. The symbols themselves are therefore manipulated and processed. Because of the symbolic nature the \gls{ai} programs can be completely understood by humans. These programs are often called \gls{expert-system}, \gls{rules-engine}, \gls{knowledge-based-ai} or \gls{knowledge-graph}. They were the first paradigms that found usage in the past and are therefore also called \gls{gofai}. In theory they try to solve modeled problems in the same abstract way humans think and would solve problems.
 
-The sub-symbolic paradigm also consists of symbols but they are not really human interpretable. The whole idea about this paradigm is to build the parts that make human thoughts possible on a more low level abstraction. It is highly inspired by neurobiology and tries to solve problems by using that abstraction to somewhat model cognitive functions. This paradigm has found a lot of usage and popularity in the recent years. This paradigm answers the question \textit{'What do humans use to think?'}.
+The sub-symbolic paradigm also consists of symbols but they are not really human interpretable. These symbols represent more abstract components that can accomplish tasks suitable for \gls{ai} related tasks. The whole idea about this paradigm is to build the parts that make human cognitive functions possible on a more low level abstraction. It is highly inspired by biology (neurobiology, genetics, evolution) and psychology. This paradigm has found a lot of usage and popularity in the recent years.
 
 \subsection{\gls{symbolic-ai}}
 As stated before symbolic AI solves complex problems by using strategies researchers thought humans would also use. This is done by transforming a problem space into symbols and then applying functions on these symbols. The key here is coming up with an abstract model of the problem space and transforming it into symbols. Because of the nature of this paradigm, expert systems are easier to debug and understand and to control. A big disadvantage is that you need expert domain knowledge in order to solve the problem the way humans would do. Another advantage is though that big data is not needed.
@@ -46,31 +46,37 @@ This way a net of variables and constraints is formed. The problem of solving th
 
 Searches can also be used to find paths from a start to a goal. This is called \textbf{planning}. In planning you have a state which describes a current situation. For the state there are possible moves that can be taken. Each move has a \textbf{condition}, \textbf{delete} and \textbf{add list}. Those lists can be used to test and execute the moves to change the state in order to pass the start state into the goal state. This kind of procedure can be used to control for example robotic arms. For more information see \gls{strips} and \cite{Nilsson1982}.
 
-\subsection{Sub-symbolic AI}
-More robust against noise
-Better performance
-Less knowledge upfront
-Easier to scale up
-Big Data
-More useful for connecting to
-neuroscience
-Better for perceptual
-problems
+\subsection{\gls{sub-symbolic-ai}}
+Sub-symbolic AI uses symbols in a more abstract way. The symbols become part of a low level system that is capable of cognitive functions. It is no longer possible to map concrete high level tasks like identifying objects in images directly to the symbols in the system. The output generated by sub-symbolic AI is therefore often probabilistic or approximated. This has led to more robust models that often showed better performance and scalability. Unfortunately most of these models need big data to get to that point. But these models are no longer bound to expert domain knowledge and have shown way better performance in tasks like visual perception. Sub-symbolic AI consists of machine learning, reinforcement learning and evolutionary computing.
 
-  - supervised
+\section{Machine learning}
+
+\gls{connectionism} tries to solve complex problems by modeling what we use to solve problems - our brain. Neurobiology states that the brain on a low level consists of neurons that are connected. This can be modeled into a computer science abstraction. A neuron is 
+
+ - supervised
   - unsupervised
   - semi supervised
-   - neural nets, deep learning
-  - reinforcement learning
-  - evolutionary algorithms
+  neural nets, deep learning
+
+\section{Reinforcement learning}
+exploitation, exploration, thompson sampling, qlearning, sarsa
+
+\section{Evolutionary computing}
+genetic algorithm, genetic programming, evolutionary programming
+
+\section{Big Data}
 
 \section{Current state of AI and further topics}
- - neural networks, capsule networks, autoencoders, attention, gans, ...
+ - capsule networks
+ - autoencoders
+ - attention mechanisms
+ - gans
+ - dqn
+ - neat
  - neuroevolution
 
-\section{Where to follow up}
+\section{Further readings}
 deeplearning book
-further readings
 
 \printglossaries
 \printindex
