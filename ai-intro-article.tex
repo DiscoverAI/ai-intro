@@ -71,7 +71,14 @@ Programs that actually perform machine learning are called \textbf{models}. Mode
 //TODO: explain Training
 
 \subsection{Supervised learning}
-Supervised learning contains solutions for \textbf{classification} and \textbf{regression} tasks. For that input data with given output labels are needed. This kind of data is also called \textbf{labeled data}. For classification tasks a \textbf{decision boundary} is searched within the data. That decision boundary separates the input data into classes that should classify fish into sea bass or salmons. To train this model labeled data of fish with the features length and skin brightness is used. For each data entry (one fish) the class sea bass or salmon (label) is already existent. The model then trains on this data and forms the decision boundary. If the model gets data of a new fish and its length and skin brightness, it will be able to identify the class this fish would be. It will predict if a fish is a salmon or a sea bass based on its length and skin brightness.
+Supervised learning contains solutions for \textbf{classification} and \textbf{regression} tasks. For that input data with given output labels are needed. This kind of data is also called \textbf{labeled data}. For classification tasks a \textbf{decision boundary} is searched within the data. That decision boundary separates the input data into classes that should classify fish into sea bass or salmons (see figure \ref{fig:fish-classification}). To train this model labeled data of fish with the features length and skin brightness is used. For each data entry (one fish) the class sea bass or salmon (label) is already existent. The model then trains on this data and forms the decision boundary. If the model gets data of a new fish and its length and skin brightness, it will be able to identify the class this fish would be. It will predict if a fish is a salmon or a sea bass based on its length and skin brightness.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.45\textwidth]{classification-fish.png}
+\caption[Classification of fish]{Classification of fish species dependent on their length and skin brightness. The classification model should learn the decision boundary (pink) to successfully distinguish between the two fish species.}
+\label{fig:fish-classification}
+\end{figure}
 
 For regression tasks the features within the input data are used to approximate other variables for the output. The output itself is unlike to classification tasks \textbf{numerical values} and not classes. \textit{Numerical values (input) are therefore used to approximate the values of one or more other numerical values (output)}. An example for this would be the approximated prediction of mileage of cars dependent on their motor power and weight. The regression model would learn a function that approximates the mileage (output) dependent on the input data, which consists of motor power and weight. This model then learned to generalize by the given data and can be used to predict the mileage of new cars it has not seen before dependent on the knowledge it gained before (given data).
 
