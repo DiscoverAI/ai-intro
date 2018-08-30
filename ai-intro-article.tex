@@ -43,7 +43,15 @@ Formal systems have rules. These rules can be used to infer new rules or answer 
 Another important aspect of symbolic AI are \textbf{searches}. In symbolic AI searches are used in finding solutions in a modeled problem space. The solution can be a path leading to a goal or the goal itself. The key aspect here is again modeling the problem space so a search is usable. This could be for example trying to find the perfect schedule for people with limited amount of time. Searches can be simple algorithms (breadth-first, depth-first) or \textbf{informed algorithms} (e.g. $A^*$). Informed algorithms use \textbf{heuristics} that try to estimate the best possible path inside a graph. This should lead to a faster search because some paths can be \textbf{pruned}. The intelligent part here lies in defining the heuristic.
 
 Another aspect in searches is the \textbf{\gls{csp}}. In a \gls{csp} are \textbf{variables} which have value spaces (\textbf{domains}). Each variable is attached to \textbf{constraints}. These constrains can have multiple arity and define limitations for the domains. 
-This way a net of variables and constraints is formed. The problem of solving the net and narrowing down the domains to a solution is the actual \gls{csp}. To solve these problems there are multiple algorithms (e.g. AC-3). \gls{csp} can be used to solve riddles or puzzles like Sudoku.
+This way a net of variables and constraints is formed (see figure \ref{fig:cs-net}). The problem of solving the net and narrowing down the domains to a solution is the actual \gls{csp}. To solve these problems there are multiple algorithms (e.g. AC-3). \gls{csp} can be used to solve riddles or puzzles like Sudoku.
+
+\begin{figure}[!htb]
+\centering
+	\includegraphics[width=.25\textwidth]{csp.pdf}
+\caption[Constraint net]{Constraint net with variables $v = \{X,Y,Z\}$ and constraints $c = \{C1, C2\}$. $C1 \mapsto X < Y$ and $C2 \mapsto X + Y = Z$. The domains for the variables are $D_X = \{1,2\}$, $D_Y = \{2,3,4\}$, $D_Z = \{4,7\}$. The solution would be $D_X = \{1\}$, $D_Y = \{3\}$, $D_Z = \{4\}$.}
+\label{fig:cs-net}
+\end{figure}
+
 
 Searches can also be used to find paths from a start to a goal. This is called \textbf{planning}. In planning you have a state which describes a current situation. For the state there are possible moves that can be taken. Each move has a \textbf{condition}, \textbf{delete} and \textbf{add list}. Those lists can be used to test and execute the moves to change the state in order to pass the start state into the goal state. This kind of procedure can be used to control for example robotic arms. For more information see \gls{strips} and \cite{Nilsson1982}.
 
