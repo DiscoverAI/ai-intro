@@ -52,7 +52,6 @@ This way a net of variables and constraints is formed (see figure \ref{fig:cs-ne
 \label{fig:cs-net}
 \end{figure}
 
-
 Searches can also be used to find paths from a start to a goal. This is called \textbf{planning}. In planning you have a state which describes a current situation. For the state there are possible moves that can be taken. Each move has a \textbf{condition}, \textbf{delete} and \textbf{add list}. Those lists can be used to test and execute the moves to change the state in order to pass the start state into the goal state. This kind of procedure can be used to control for example robotic arms. For more information see \gls{strips} and \cite{Nilsson1982}.
 
 \subsection{\gls{sub-symbolic-ai}}
@@ -62,7 +61,14 @@ Sub-symbolic AI uses symbols in a more abstract way. The symbols become part of 
 Learning itself plays a huge part in cognitive functions. Learning essentially means incrementally improving performance on a given task. This implies that knowledge is represented in any form and incrementally more knowledge is generated or the already existing knowledge is hardened and diversified. Ways of achieving this would be by adding new data to that knowledge base or by adding time to extract more knowledge of the given knowledge base. Learning not only consists of extracting knowledge and retaining that knowledge of already learned data but also means handling new data and transferring already learned knowledge (by generalizing).
 
 Machine learning accomplishes learning by doing pattern recognition in (big) data and generalizing these patterns. 
-Programs that actually perform machine learning are called models. Models use input data and output data. The input data contains features. Input data is used to input into the model. Output data is data that should or is output by the model. Machine learning models generate knowledge implicitly by the features of the input data. Machine learning tasks can be grouped into supervised and unsupervised learning.
+Programs that actually perform machine learning are called models. Models use input data and output data (see figure \ref{fig:machine-learning-basic}). The input data contains features. Input data is used to input into the model. Output data is data that should or is output by the model. Machine learning models generate knowledge implicitly by the features of the input data. Machine learning tasks can be grouped into supervised and unsupervised learning.
+
+\begin{figure}[!htb]
+\centering
+	\includegraphics[width=.4\textwidth]{machine-learning-basic.pdf}
+\caption[Basic structure of machine learning]{Models use input data to produce output data. The model needs to be trained in order to generate knowledge from given data and generalize from it. The model can then be used to produce output on unseen input data (prediction).}
+\label{fig:machine-learning-basic}
+\end{figure}
 
 //TODO: explain Training
 
