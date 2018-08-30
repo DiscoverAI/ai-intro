@@ -56,7 +56,12 @@ Learning itself plays a huge part in cognitive functions. Learning essentially m
 Machine learning accomplishes learning by doing pattern recognition in (big) data and generalizing these patterns. 
 Programs that actually perform machine learning are called models. Models use input data and output data. The input data contains features. Input data is used to input into the model. Output data is data that should or is output by the model. Machine learning models generate knowledge implicitly by the features of the input data. Machine learning tasks can be grouped into supervised and unsupervised learning.
 
+//TODO: explain Training
+
 \subsection{Supervised learning}
+Supervised learning contains solutions for classification and regression tasks. For that input data with given output labels are needed. This kind of data is also called labeled data. For classification tasks a decision boundary is searched within the data. That decision boundary separates the input data into classes. Consider that should classify fish into sea bass or salmons. To train this model labeled data of fish with the features length and skin brightness is used. For each data entry (one fish) the class sea bass or salmon (label) is already existent. The model then trains on this data and forms the decision boundary. If the model gets data of a new fish and its length and skin brightness, it will be able to identify the class this fish would be. It will predict if a fish is a salmon or a sea bass based on its length and skin brightness.
+
+For regression tasks the features within the input data are used to approximate other variables for the output. The output itself is unlike to classification tasks numerical values and not classes. Numerical values (input) are therefore used to approximate the values of one or more other numerical values (output). An example for this would be the approximated prediction of mileage of cars dependent on their motor power and weight. The regression model would learn a function that approximates the mileage (output) dependent on the input data, which consists of motor power and weight. This model then learned to generalize by the given data and can be used to predict the mileage of new cars it has not seen before dependent on the knowledge it gained before (given data).
 
 \subsection{Unsupervised learning}
 
