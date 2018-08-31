@@ -68,7 +68,11 @@ Programs that actually perform machine learning are called \textbf{models}. Mode
 \label{fig:machine-learning-basic}
 \end{figure}
 
-//TODO: explain Training
+In order to make models work they have to be trained on data. That data is separated into test and train data. The training data is used to feed the model with during training. The test data is used after training to see how well the model is able to generalize on unseen data. The most suggested train and test split is 80:20.
+
+When training the model on the training data a metric called loss or error is calculated. This metric determines how far off the models output is from the original output (high loss or error). The goal of training is to minimize this metric. Depending on the error change rate (derivation) the parameters of the models are tuned to that error derivation. The model itself is therefore optimized through training.
+
+After the training is done the test data can be used to determine if a model is underfitting or overfitting. These terms describe the generalizing capabilities of the model. Generalizing means that general abstract knowledge was generated from the trained on data (learning) and new unseen data can be processed by applying that general abstract knowledge on that data. This means that decisions and assumptions can be made on unseen data. Overfitting means, that the model started to memorize patterns in the data instead of generalizing from it. This can happen when the training is too long or the variance in the training data is not high enough. Underfitting means that the training error or loss has not been well enough optimized yet. This can happen when training is too short or not enough data has been seen.
 
 \subsection{Supervised learning}
 Supervised learning contains solutions for \textbf{classification} and \textbf{regression} tasks. For that input data with given output labels are needed. This kind of data is also called \textbf{labeled data}. For classification tasks a \textbf{decision boundary} is searched within the data. That decision boundary separates the input data into classes that should classify fish into sea bass or salmons (see figure \ref{fig:fish-classification}). To train this model labeled data of fish with the features length and skin brightness is used. For each data entry (one fish) the class sea bass or salmon (label) is already existent. The model then trains on this data and forms the decision boundary. If the model gets data of a new fish and its length and skin brightness, it will be able to identify the class this fish would be. It will predict if a fish is a salmon or a sea bass based on its length and skin brightness.
@@ -85,8 +89,12 @@ For regression tasks the features within the input data are used to approximate 
 \subsection{Unsupervised learning}
 Unsupervised learning is used to find patterns in data without labels (\textbf{unlabeled data}). The input data does not have labeled output data. This means that no interpretation can be concluded of the data. So using unsupervised learning is often also called \textbf{knowledge discovery}. In real life most existent data is unlabeled or partially labeled. This makes unsupervised learning very useful. Unsupervised learning can then be used to \textbf{cluster} data. This will group similar data input clusters. These clusters can then be further processed and put into classes for example.
 
-\subsection{\gls{connectionism}}
-Connectionism tries to solve complex problems by modeling what we use to solve problems - our brain. Neurobiologically the brain consists on a low level of neurons that are connected. This can be modeled into a computer science abstraction. A neuron is 
+\subsection{Connectionism}
+\gls{connectionism} tries to solve complex problems by modeling what we use to solve problems - our brain. Neurobiologically the brain consists on a low level of neurons that are highly connected. These neurons are structured in layers. Subgroups of these layers can be mapped to individual tasks like hearing, controlling motor functions and more. The actual connections and the resulting topology highly specializes the actual function of each of these nets and their performance on different tasks. This can be modeled into a computer science abstraction.
+
+
+
+A neuron is 
 
 \subsection{Deep learning}
 
