@@ -92,9 +92,14 @@ Unsupervised learning is used to find patterns in data without labels (\textbf{u
 \subsection{Connectionism}
 \gls{connectionism} tries to solve complex problems by modeling what we use to solve problems - our brain. Neurobiologically the brain consists on a low level of neurons that are highly connected. These neurons are structured in layers. Subgroups of these layers can be mapped to individual tasks like hearing, controlling motor functions and more. The actual connections and the resulting topology highly specializes the actual function of each of these nets and their performance on different tasks. This can be modeled into a computer science abstraction.
 
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.3\textwidth]{neuron.eps}
+\caption[Computer science neuron abstraction]{Computer science model of a neuron. A neuron has incoming connections $a_0 ... a_i$. Each of those connections is weighted by $w_{0j} .. w_{ij}$. These connections and weights are multiplied and summed up in $\sum^{in_j}$. The output $a_j$ of this neuron is then calculated by applying the activation function $g$ on the sum $a_j = g(\sum^{in_j})$.}
+\label{fig:neuron}
+\end{figure}
 
-
-A neuron is 
+A neural network is a graph. The nodes in this graph are called neurons. Each neuron has incoming weighted connections. These are used to calculate the output of each neuron (see figure \ref{fig:neuron}). The neurons are arranged in layers. Layers are just collections of neurons. A neural network trains by adjusting the weights of each connection with an algorithm called backpropagation. To speed up that process a optimization technique called stochastic gradient descent is used. The way the neurons are connected determines the topology and specification of that network. Different topologies are better at solving different tasks.
 
 \subsection{Deep learning}
 
