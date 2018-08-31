@@ -90,7 +90,7 @@ For regression tasks the features within the input data are used to approximate 
 Unsupervised learning is used to find patterns in data without labels (\textbf{unlabeled data}). The input data does not have labeled output data. This means that no interpretation can be concluded of the data. So using unsupervised learning is often also called \textbf{knowledge discovery}. In real life most existent data is unlabeled or partially labeled. This makes unsupervised learning very useful. Unsupervised learning can then be used to \textbf{cluster} data. This will group similar data input clusters. These clusters can then be further processed and put into classes for example.
 
 \subsection{Connectionism}
-\gls{connectionism} tries to solve complex problems by modeling what we use to solve problems - our brain. Neurobiologically the brain consists on a low level of neurons that are highly connected. These neurons are structured in layers. Subgroups of these layers can be mapped to individual tasks like hearing, controlling motor functions and more. The actual connections and the resulting topology highly specializes the actual function of each of these nets and their performance on different tasks. This can be modeled into a computer science abstraction.
+\gls{connectionism} tries to solve complex problems by modeling what we use to solve problems - our brain. Neurobiologically the brain consists on a low level of \textbf{neurons} that are highly connected. These neurons are structured in \textbf{layers}. Subgroups of these layers can be mapped to individual tasks like hearing, controlling motor functions and more. The actual connections and the resulting topology highly specializes the actual function of each of these nets and their performance on different tasks. This can be modeled into a computer science abstraction.
 
 \begin{figure}[!htb]
 \centering
@@ -99,7 +99,9 @@ Unsupervised learning is used to find patterns in data without labels (\textbf{u
 \label{fig:neuron}
 \end{figure}
 
-A neural network is a graph. The nodes in this graph are called neurons. Each neuron has incoming weighted connections. These are used to calculate the output of each neuron (see figure \ref{fig:neuron}). The neurons are arranged in layers. Layers are just collections of neurons. A neural network trains by adjusting the weights of each connection with an algorithm called backpropagation. To speed up that process a optimization technique called stochastic gradient descent is used. The way the neurons are connected determines the topology and specification of that network. Different topologies are better at solving different tasks.
+A neural network is a \textbf{graph}. The nodes in this graph are called neurons. Each neuron has incoming \textbf{weighted connections}. These are used to calculate the \textbf{output} of each neuron (see figure \ref{fig:neuron}). The neurons are arranged in layers. Layers are just collections of neurons. A neural network trains by adjusting the weights of each connection with an algorithm called \textbf{backpropagation}. To speed up that process a optimization technique called \textbf{stochastic gradient descent} is used. The way the neurons are connected determines the topology and specification of that network. Different topologies are better at solving different tasks.
+
+//TODO: feedforward, convolutional, recurrent?
 
 \subsection{Deep learning}
 
