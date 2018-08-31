@@ -107,13 +107,25 @@ A neural network is a \textbf{graph}. The nodes in this graph are called neurons
 Machine learning algorithms perform bad on complex task with a \textbf{high dimensionality space}. This is due to the fact that with rising dimensionality the amount of possible combinations explode and the amount of available data to train on diminishes. \textit{The data density shrinks}. This is in contrast to the desired generalization. For generalization it is hard to find answers for data that is not at all represented in any way in the training data. To solve this problem deep learning was introduced. By adding more layers to a model and making the model deeper this way, the model is able to  learn more \textbf{abstract meta features} in the underlying training data. In this way \textbf{feature extraction} is being done automatically.
 
 \section{Reinforcement learning}
-exploitation vs. exploration, thompson sampling, qlearning, sarsa
+Reinforcement learning is based on human psychology. A possible way humans might learn is by \textbf{rewards} or \textbf{penalization}. So learning is done by \textbf{reinforcement} (positive or negative). The model for this contains an \textbf{agent} that lives in an \textbf{environment} (see figure \ref{fig:reinforcement-learning}). The agent can take possible \textbf{actions} inside that environment. The actions then change the \textbf{state} of the environment. The result of that action is also a \textbf{reward}. This reward and the changed state are then perceived or processed by the agent. The agent tries to maximize the reward. Rewards are given by for example finding a goal. The agent has to run multiple \textbf{episodes}. Each episode contains a start and an end. On each start the state of the environment is reset. Eventually the agent should then learn the most optimal way to achieve a goal and solve a complex task.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.3\textwidth]{reinforcement-learning.pdf}
+\caption[Model of reinforcement learning]{Model of reinforcement learning. An agent performs actions in an environment and receives rewards. The state of the environment gets changed as soon as the agent performed an action. The agent tries to optimize the reward.}
+\label{fig:reinforcement-learning}
+\end{figure}
+
+In doing so an agent can either \textbf{exploit} or \textbf{explore}. Exploitation means the agent finds a way to get to the goal but starts to only replay this way of achieving the goal and might not find a more optimal path. Exploration means the agent tries out different paths to get to the goal and might not be able to find it. It is a trade off the agent has to do to be optimal. A way to overcome this problem is \textbf{Thompson Sampling} \cite{Chapelle2011}.
+
+Some popular algorithms for reinforcement learning are \textbf{Q-Learning} \cite{Watkins1992} or \textbf{Sarsa} \cite{Berges1995}. Reinforcement learning was used in AlphaGo and AlphaZero \cite{silver2017}.
 
 \section{Evolutionary computing}
 TODO: EMMA
 genetic algorithm, genetic programming, evolutionary programming
 
 \section{Big Data in context}
+TODO: Arif?
 
 \section{Current state of AI and further topics}
  - capsule networks
