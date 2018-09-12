@@ -101,7 +101,13 @@ Unsupervised learning is used to find patterns in data without labels (\textbf{u
 
 A neural network is a \textbf{graph}. The nodes in this graph are called neurons. Each neuron has incoming \textbf{weighted connections}. These are used to calculate the \textbf{output} of each neuron (see figure \ref{fig:neuron}). The neurons are arranged in layers. Layers are just collections of neurons. A neural network trains by adjusting the weights of each connection with an algorithm called \textbf{backpropagation}. To speed up that process a optimization technique called \textbf{stochastic gradient descent} is used. The way the neurons are connected determines the topology and specification of that network. Different topologies are better at solving different tasks.
 
-//TODO: feedforward, convolutional, recurrent?
+The simplest topology is a feedforward network. Feedforward networks are networks with input, hidden and output layers. The neurons of each layer are connected to each neuron of the following network. The connections are only in a feedforward direction. This is also called fully connected. These networks are good for not so complex tasks.
+
+Another topology are recurrent neural nets. Recurrent neural nets have neurons in layers, that have connections from neurons from later layers or from themselves. This way it is possible to create a memory with the internal states of these neurons. This kind of topology has been shown promising when trying to process sequential data or time series data.
+
+A similar topology are convolutional neural nets. convolutional neural nets have multidimensional input data (2D, e.g. pictures). They feed through that data with a reception field. This field is a smaller subset that is fed into parallel hidden layers that process that input data. Those hidden layers can then be connected to pooling layers that condense the parallel hidden layers and can in the end be fed into fully connected layers. This kind or architecture is great for learning from images or sequential data where neighboring data helds critical information.
+
+//TODO: add network images
 
 \subsection{Deep learning}
 Machine learning algorithms perform bad on complex task with a \textbf{high dimensionality space}. This is due to the fact that with rising dimensionality the amount of possible combinations explode and the amount of available data to train on diminishes. \textit{The data density shrinks}. This is in contrast to the desired generalization. For generalization it is hard to find answers for data that is not at all represented in any way in the training data. To solve this problem deep learning was introduced. By adding more layers to a model and making the model deeper this way, the model is able to  learn more \textbf{abstract meta features} in the underlying training data. In this way \textbf{feature extraction} is being done automatically.
@@ -127,7 +133,7 @@ genetic algorithm, genetic programming, evolutionary programming
 \section{Big Data in context}
 TODO: Arif?
 
-\section{Current state of AI and further topics}
+\section{Recent advances in machine learning and further topics}
  - capsule networks
  - autoencoders
  - attention mechanisms
