@@ -134,13 +134,15 @@ genetic algorithm, genetic programming, evolutionary programming
 TODO: Arif?
 
 \section{Recent advances in machine learning and further topics}
- - capsule networks
- - autoencoders
- - attention mechanisms
- - gans
- - dqn
+Recent advancements in neural networks include capsule networks. Capsule networks are neural nets that can be used for image recognition. They are inspired by neurobiology and what our brain structures for image recognition look like. Capsule networks are similar to convolutional neural nets but instead of convolutional layers have capsules. These capsules are groups of neurons that are trained to recognize objects (with their instantation) and orientations of those objects \cite{Sabour2017}.
+
+Another field of neural networks that is getting more attention in the last years are generative models. Generative models consist of neural nets that generate data. That can be autoencoders or generial adversial networks. The are trained to generate output based on the abstract features they learned from given input. This in itself represents a unsupervised problem. You can make it a supervised and trainable problem though by training input data and expecting the same input data again (autoencoders) or training a different neural network to become a discriminator and tell whether the created data was artificial or not (generial adversial network).
+
+When it comes to handling a high dimensional input space it often comes with a lot of noise in the data. A way to address this problem are attention mechanisms that make a neural net focus on certain parts of the input data at a certain time (attention) and get more meaningful features from input chunks that make more sense in an isolated environment before taking everything else into consideration.
+
+Other approaches are combining connectionists models with other paradigms of artificial intelligence. That includes combining reinforcement learning with neural nets, where you make a neural net optimize against a reinforcement learning error (q-learning). This is called deep q-network. Also combining evolutionary computing with neural nets has led to better overall performances. This can be done by neuroevolution. Neuroevolution describes taking neural nets and considering them as replicants or survival machines. These replicants have a phenotype and a genotype. They also multiply and can be manipulated, by manipulating the phenotype. When they multiply random mutation can occur that changes the phenotype. This will lead to new generations of those replicants. At the end of each generation the replicants are measured against a fitness function that determines how well the replicants can survive. This means solving a given task in a maybe given environment.
+
  - neat
- - neuroevolution
 
 \section{Further readings}
 To get into the basics deeper and to learn more about some neural network architectures refer to \cite{Goodfellow-et-al-2016}. This book is available online and contains nearly everything you need to know about neural nets and deep learning.
