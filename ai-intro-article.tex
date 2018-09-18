@@ -128,24 +128,33 @@ Some popular algorithms for reinforcement learning are \textbf{Q-Learning} \cite
 
 \section{Evolutionary computing}
 TODO: EMMA
-genetic algorithm, genetic programming, evolutionary programming
+- genetic algorithm
+- genetic programming
+- evolutionary programming
 
 \section{Big Data in context}
 TODO: Arif?
+- the more the better, although you need less regarding machine learning
+- big data is tool to process training and test data into ingestible form
+- etl
+- map reduce
+- datasets
+- data marts?
 
 \section{Recent advances in machine learning and further topics}
-Recent advancements in neural networks include capsule networks. Capsule networks are neural nets that can be used for image recognition. They are inspired by neurobiology and what our brain structures for image recognition look like. Capsule networks are similar to convolutional neural nets but instead of convolutional layers have capsules. These capsules are groups of neurons that are trained to recognize objects (with their instantation) and orientations of those objects \cite{Sabour2017}.
+Recent advancements in neural networks include \textbf{capsule networks}. Capsule networks are neural nets that can be used for image recognition. They are inspired by neurobiology and what our brain structures for image recognition look like \cite{Sabour2017}. Capsule networks are similar to convolutional neural nets but instead of convolutional layers have capsules. These capsules are groups of neurons that are trained to recognize objects (with their instantation) and orientations of those objects.
 
-Another field of neural networks that is getting more attention in the last years are generative models. Generative models consist of neural nets that generate data. That can be autoencoders or generial adversial networks. The are trained to generate output based on the abstract features they learned from given input. This in itself represents a unsupervised problem. You can make it a supervised and trainable problem though by training input data and expecting the same input data again (autoencoders) or training a different neural network to become a discriminator and tell whether the created data was artificial or not (generial adversial network).
+Another field of neural networks that is getting more attention in the last years are \textbf{generative models}. Generative models consist of neural nets that generate data. Generative models can be \textbf{autoencoders} or \textbf{\gls{gan}}. They are trained to generate output based on the abstract features they learned from given input. This in itself represents a unsupervised problem. You can make it a supervised and trainable problem though by training input data and expecting the same input data again (autoencoders) or training a different neural network to become a \textbf{discriminator} and tell whether the created data was artificial or not (\gls{gan}).
 
-When it comes to handling a high dimensional input space it often comes with a lot of noise in the data. A way to address this problem are attention mechanisms that make a neural net focus on certain parts of the input data at a certain time (attention) and get more meaningful features from input chunks that make more sense in an isolated environment before taking everything else into consideration.
+When it comes to handling a high dimensional input space, the data often comes with a lot of noise. A way to address this problem are \textbf{attention mechanisms} that make a neural net focus on certain parts of the input data at a certain time \cite{Bahdanau2015}. In that way attention is introduced to the neural net. With this mechanism it is possible to get more meaningful features from input chunks that make more sense in an isolated environment before taking everything else into consideration.
 
-Other approaches are combining connectionists models with other paradigms of artificial intelligence. That includes combining reinforcement learning with neural nets, where you make a neural net optimize against a reinforcement learning error (q-learning). This is called deep q-network. Also combining evolutionary computing with neural nets has led to better overall performances. This can be done by neuroevolution. Neuroevolution describes taking neural nets and considering them as replicants or survival machines. These replicants have a phenotype and a genotype. They also multiply and can be manipulated, by manipulating the phenotype. When they multiply random mutation can occur that changes the phenotype. This will lead to new generations of those replicants. At the end of each generation the replicants are measured against a fitness function that determines how well the replicants can survive. This means solving a given task in a maybe given environment.
-
- - neat
+Other approaches are combining connectionists models with other paradigms of artificial intelligence. That includes combining reinforcement learning with neural nets, where you make a neural net optimize against a reinforcement learning error (Q-learning). This is called \textbf{\gls{dqn}} \cite{Mnih2015}. Also combining evolutionary computing with neural nets has led to better overall performances. This can be done by \textbf{neuroevolution} \cite{Sher2013}. Neuroevolution describes taking neural nets and considering them as \textbf{replicants} or \textbf{survival machines}. These replicants have a phenotype and a genotype. They also multiply and can be manipulated, by manipulating the phenotype. When they multiply random mutation can occur that changes the phenotype. This will lead to new generations of those replicants. At the end of each generation the replicants are measured against a \textbf{fitness function} that determines how well the replicants can survive. This means solving a given task in an environment.
+These approaches can go so far to not only change the hyperparameters of the neural net but also change the whole topology. This kind of neuroevolution algorithm is called \textbf{\gls{neat}} \cite{stanley:ec02}.
 
 \section{Further readings}
 To get into the basics deeper and to learn more about some neural network architectures refer to \cite{Goodfellow-et-al-2016}. This book is available online and contains nearly everything you need to know about neural nets and deep learning.
+
+If you want to get a practical approach in the field of neuroevolution, \cite{Sher2013} is a good start.
 
 \printglossaries
 \printindex
