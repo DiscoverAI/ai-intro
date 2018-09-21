@@ -101,13 +101,33 @@ Unsupervised learning is used to find patterns in data without labels (\textbf{u
 
 A neural network is a \textbf{graph}. The nodes in this graph are called neurons. Each neuron has incoming \textbf{weighted connections}. These are used to calculate the \textbf{output} of each neuron (see figure \ref{fig:neuron}). The neurons are arranged in layers. Layers are just collections of neurons. A neural network trains by adjusting the weights of each connection with an algorithm called \textbf{backpropagation}. To speed up that process a optimization technique called \textbf{stochastic gradient descent} is used. The way the neurons are connected determines the topology and specification of that network. Different topologies are better at solving different tasks.
 
-The simplest topology is a feedforward network. Feedforward networks are networks with input, hidden and output layers. The neurons of each layer are connected to each neuron of the following network. The connections are only in a feedforward direction. This is also called fully connected. These networks are good for not so complex tasks.
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.3\textwidth]{feed-forward-neural-net.pdf}
+\caption[Feed forward neural net]{Feed forward neural net with input layer, one hidden layer and a output layer. The input layer and the hidden layer have a Bias neuron that can be used to enhance activation function usage.}
+\label{fig:ff}
+\end{figure}
 
-Another topology are recurrent neural nets. Recurrent neural nets have neurons in layers, that have connections from neurons from later layers or from themselves. This way it is possible to create a memory with the internal states of these neurons. This kind of topology has been shown promising when trying to process sequential data or time series data.
+The simplest topology is a \textbf{feedforward network} (see figure \ref{fig:ff}). Feedforward networks are networks with \textbf{input}, \textbf{hidden} and \textbf{output layers}. The neurons of each layer are connected to each neuron of the following network. The connections are only in a feedforward direction. This is also called \textbf{fully connected}. These networks are good for not so complex tasks.
 
-A similar topology are convolutional neural nets. convolutional neural nets have multidimensional input data (2D, e.g. pictures). They feed through that data with a reception field. This field is a smaller subset that is fed into parallel hidden layers that process that input data. Those hidden layers can then be connected to pooling layers that condense the parallel hidden layers and can in the end be fed into fully connected layers. This kind or architecture is great for learning from images or sequential data where neighboring data helds critical information.
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.3\textwidth]{recurrent-neural-net.pdf}
+\caption[Recurrent neural net]{Recurrent neural net with input layer, one hidden layer and a output layer. The hidden layer has neurons that have connections to themselves (recurrent).}
+\label{fig:rnn}
+\end{figure}
 
-//TODO: add network images
+Another topology are \textbf{recurrent neural nets} (see figure \ref{fig:rnn}). Recurrent neural nets have neurons in layers, that have connections from neurons from later layers or from themselves. This way it is possible to create a memory with the internal states of these neurons. This kind of topology has been shown promising when trying to process sequential data or time series data.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=.45\textwidth]{simple_conv.png}
+\caption[Convolutional neural net]{Convolutional neural net with input layer, one convolutional layer, one pooling layer, one feedforward layer and a output layer. 
+Taken from~\protect\cite[Ch. 6]{nielsen2015}}
+\label{fig:cnn}
+\end{figure}
+
+A similar topology are \textbf{convolutional neural nets} (see figure \ref{fig:cnn}). Convolutional neural nets have multidimensional input data (2D, e.g. pictures). They feed through that data with a \textbf{receptive field}. This field is a smaller subset that is fed into parallel hidden layers that process that input data. Those hidden layers can then be connected to \textbf{pooling layers} that condense the parallel hidden layers and can in the end be fed into fully connected layers. This kind or architecture is great for learning from images or sequential data where neighboring data helds critical information.
 
 \subsection{Deep learning}
 Machine learning algorithms perform bad on complex task with a \textbf{high dimensionality space}. This is due to the fact that with rising dimensionality the amount of possible combinations explode and the amount of available data to train on diminishes. \textit{The data density shrinks}. This is in contrast to the desired generalization. For generalization it is hard to find answers for data that is not at all represented in any way in the training data. To solve this problem deep learning was introduced. By adding more layers to a model and making the model deeper this way, the model is able to  learn more \textbf{abstract meta features} in the underlying training data. In this way \textbf{feature extraction} is being done automatically.
